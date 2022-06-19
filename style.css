@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Kumbh+Sans:wght@400;700&display=swap');
+*,
+*::before,
+*::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 16px;
+}
+
+html {
+    font-size: 12px;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    background-color: #3c4053;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.container {
+    width: 100%;
+    max-width: 80rem;
+    margin :0 auto;
+    padding: 0 5rem;
+    border-radius: 20px;
+    background-color: aliceblue;
+}
+
+.container .column {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+/* .container .column:nth-child(2){
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+} */
+
+.container .column:nth-child(1) {
+    width: 50%;
+}
+
+div .img-logo {
+    margin-top: 10rem;
+    text-align: center;
+}
+
+div .img-logo img {
+    border-radius: 50%;
+}
+
+.accordion-item {
+    background-color: rgb(185, 210, 210);
+    border-radius: .4rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: .5rem 2px .5rem rgba(0, 0, 0, .1);
+}
+
+.according-link {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: hsl(237, 12%, 33%);
+    text-decoration: none;
+    /* background-color: #283042; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.according-link i {
+    color: #e7d5ff;
+    padding: .5rem;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    /*background-color: #212838;*/
+    transition: max-height 650ms;
+    transition-duration: 2s;
+}
+
+.answer::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: .08rem;
+    background-color: hsl(240, 5%, 91%);
+    top: 95%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.answer p {
+    color: hsl(240, 6%, 50%);
+    font-size: 1.4rem;
+    padding: 2rem;
+}
+
+.accordion-item:target .answer {
+    max-height: 20rem;
+}
+
+.accordion-item:target .according-link .arrow-down {
+    transition: 0.5ms;
+    transform: rotate(-180deg);
+}
+
+.text-heading h1 {
+    color: hsl(238, 29%, 16%);
+    margin: 0rem 1rem 1rem 1rem;
+    font-weight: 700;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .column {
+        width: 100%;
+    }
+    .container .column:nth-child(1){
+        display: none;
+    }
+    .text-heading h1 {
+        text-align: center;
+    }
+    .according-link {
+        font-size: 2rem;
+    }
+
+    
+  }
